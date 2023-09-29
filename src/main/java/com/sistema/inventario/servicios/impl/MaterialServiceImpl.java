@@ -2,15 +2,14 @@ package com.sistema.inventario.servicios.impl;
 
 import com.sistema.inventario.modelo.Ciudad;
 import com.sistema.inventario.modelo.Material;
-import com.sistema.inventario.repositorios.EstadoMaterialRepository;
 import com.sistema.inventario.repositorios.MaterialReporsity;
 import com.sistema.inventario.servicios.MaterialService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MaterialServiceImpl implements MaterialService {
@@ -42,7 +41,7 @@ public class MaterialServiceImpl implements MaterialService {
     }
 
     @Override
-    public List<Material> buscarMaterialesPorCiudad(Ciudad ciudad) {
+    public List<Material> buscarMaterialesPorCiudad(Optional<Ciudad> ciudad) {
         return materialRepository.findByCiudad(ciudad);
     }
 

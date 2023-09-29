@@ -5,6 +5,7 @@ import com.sistema.inventario.modelo.Material;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 public interface MaterialService {
 
@@ -16,7 +17,7 @@ public interface MaterialService {
 
     List<Material> buscarMaterialesPorSerial(String serial);
 
-    List<Material> buscarMaterialesPorCiudad(Ciudad ciudad);
+    List<Material> buscarMaterialesPorCiudad(Optional<Ciudad> ciudad);
 
     Material crearMaterial(Material material);
 

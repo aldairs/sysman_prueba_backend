@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface MaterialReporsity extends JpaRepository<Material, Long> {
@@ -17,7 +18,7 @@ public interface MaterialReporsity extends JpaRepository<Material, Long> {
 
     List<Material> findBySerial(String serial);
 
-    List<Material> findByCiudad(Ciudad ciudad);
+    List<Material> findByCiudad(Optional<Ciudad> ciudad);
 
 
 }
